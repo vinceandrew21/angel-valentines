@@ -204,6 +204,42 @@ body {
 
 #envelope-container p {
   font-size: 40px;
+  white-space: nowrap;
+}
+
+/* Mobile: envelope screen like reference (centered, pastel bg, rounded greeting) */
+@media (max-width: 768px) {
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  #envelope-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    transform: translateY(-4%);
+  }
+
+  #envelope-container .greeting {
+    font-size: clamp(0.95rem, 4.2vw, 2.25rem);
+    font-weight: 600;
+    color: #333;
+    margin: 1.25rem 0 0;
+    line-height: 1.4;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+  }
+
+  #envelope {
+    width: min(160px, 42vw);
+    max-width: 160px;
+  }
 }
 
 /* Cat */
